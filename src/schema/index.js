@@ -6,5 +6,7 @@ export const loginSchema = yup.object({
 })
 export const signUpSchema = yup.object({
     email:yup.string().email().required(),
-    password:yup.string().required()
+    password:yup.string().required(),
+    fullName:yup.string().required(),
+    confirmPassword:yup.string().required(),
 })
