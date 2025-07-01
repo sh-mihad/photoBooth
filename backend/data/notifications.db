@@ -12,3 +12,4 @@
 {"type":"like","userId":"imzy7nVeUHUHAZAn","fromUserId":"JQg6HFNh1mHmB2sI","postId":"fITwFDGCjuXghsGA","isRead":false,"createdAt":{"$$date":1749619137153},"_id":"r7RsyStkclaxH0ip"}
 {"type":"like","userId":"JQg6HFNh1mHmB2sI","fromUserId":"HAuK5dfK1CRnZ2xb","postId":"GCoEYFdlrinizmP3","isRead":true,"createdAt":{"$$date":1749619090371},"_id":"sOctmXzqOoukZb3J"}
 {"$$indexCreated":{"fieldName":"userId","unique":false,"sparse":false}}
+{"$$indexCreated":{"fieldName":"userId"}}

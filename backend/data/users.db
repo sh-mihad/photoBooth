@@ -3,3 +3,6 @@
 {"name":"John Doe","email":"john@example.com","password":"$2b$10$r.Pep3QTwt9zPgr4CtjeH.NiUMY0/sMWqooXHzykHmQPy8fYgLvHC","avatar":null,"bio":"","createdAt":{"$$date":1749619607469},"_id":"bZwf4WBPLJtnTGtr"}
 {"name":"Sumit Saha","email":"sumit@learnwithsumit.com","password":"$2b$10$.iTFmOp7bq9/qVxIuVesOewwhLcypap4QHJpNYwZYx8HRs7uPAGj6","avatar":"uploads/a1f3ba38-f344-473b-a92c-709db7bf25d3.png","bio":"Father | Entrepreneur | Educator | Programming Enthusiast","createdAt":{"$$date":1749617404679},"_id":"imzy7nVeUHUHAZAn","website":"https://www.facebook.com/sumit.analyzen","gender":"male"}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"email","unique":true}}
+{"name":"John Doe","email":"johny@example.com","password":"$2b$10$bdNjwf.9LJXDXkgp/Nw55.27CzKWbXQxPvGqIkW5U1v/MLweGwcEO","avatar":null,"bio":"","createdAt":{"$$date":1751349347259},"_id":"a88Co0MgvOQVaUuu"}
+{"name":"John Doe","email":"john@example.com","password":"$2b$10$DxXyu/NALMwVZ5r05HrhpOHWE9R1LOIdV5mKRWn2pytIK3jnZZ46q","avatar":null,"bio":"","createdAt":{"$$date":1749619607469},"_id":"bZwf4WBPLJtnTGtr"}
