@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import api from "../../api/api";
 import useAuth from "../../hooks/useAuth";
 import Modal from "../../modal/Modal";
 import LoginForm from "../auth/LoginForm";
@@ -27,12 +27,12 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_SERVER_BASE_URL}/posts`)
+        const response = await api.get(`/posts`)
         if (response.status === 200) {
           setPosts(response.data)
         }
       } catch (error) {
-        console.log(error);
+        console.log("error-",error.config._retry);
       }
     }
 
