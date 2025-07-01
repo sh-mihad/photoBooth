@@ -10,7 +10,7 @@ export default function useAxiosAuth (){
         setError(null)
         try {
               const response = await axios.post(`${import.meta.env.VITE_SERVER_BASE_URL}${urlPath}`,formData)
-              if(response.status === 200){
+              if(response.status === 200 || response.status === 201){
                 setLoading(false)
                 cb(response.data)
               }
