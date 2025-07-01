@@ -1,12 +1,12 @@
-import PostImg from "../../../assets/post-1.jpg"
-import userImg from "../../../assets/user-1.png"
+import { getAvatar } from "../../../utils"
 
-export default function PostContent() {
+export default function PostContent({post}) {
+    const {image,likesCount,likes} = post || {}
     return (
         <>
             <div className="relative">
                 <a href="./post-details.html">
-                    <img src={PostImg} alt="Post image"
+                    <img src={getAvatar(image)} alt="Post image"
                         className="w-full object-cover max-h-[1000px]" />
                 </a>
             </div>
@@ -39,13 +39,14 @@ export default function PostContent() {
                     </button>
             </div>
             <div className="px-3">
+                
                 <div className="flex items-center">
                     <div className="h-6 flex -space-x-2">
-                        <img src={userImg} alt="User avatar" className="w-6 h-6 rounded-full" />
-                        <img src={userImg} alt="User avatar" className="w-6 h-6 rounded-full" />
-                        <img src={userImg} alt="User avatar" className="w-6 h-6 rounded-full" />
+                        {likes[0] && <img src={getAvatar(likes[0].avatar)} alt="User avatar" className="w-6 h-6 rounded-full" />}
+                         {likes[1] && <img src={getAvatar(likes[1].avatar)} alt="User avatar" className="w-6 h-6 rounded-full" />}
+                         {likes[2] && <img src={getAvatar(likes[2].avatar)} alt="User avatar" className="w-6 h-6 rounded-full" />}
                     </div>
-                    <p className="text-sm ml-2"><span className="font-semibold">126 likes</span></p>
+                    <p className="text-sm ml-2"><span className="font-semibold">{likesCount} likes</span></p>
                 </div>
             </div>
         </>
