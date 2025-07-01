@@ -6,57 +6,58 @@ import ErrorPage from "../pages/ErrorPage";
 import HomePage from "../pages/home/HomePage";
 import Notifications from "../pages/notifications/Notifications";
 import PostDetails from "../pages/PostPage/PostDetails";
+import PrivetRoute from "../pages/PrivetRoute";
 import EditProfile from "../pages/Profile/EditProfile";
 import Profile from "../pages/Profile/Profile";
 import RootPage from "../pages/RootPage/RootPage";
 
 const router = createBrowserRouter([
     {
-       children:[
-         {
-        path: '/',
-        element: <RootPage />,
-        children:[
+        children: [
             {
-                index:true,
-                element : <HomePage/>
+                path: '/',
+                element: <RootPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <HomePage />
+                    },
+                    {
+                        path: "/notifications",
+                        element: <PrivetRoute><Notifications/></PrivetRoute>
+                    },
+                    {
+                        path: "/create-post",
+                        element: <PrivetRoute><CreateEditPost /></PrivetRoute>
+                    },
+                    {
+                        path: "/me",
+                        element: <PrivetRoute><Profile /></PrivetRoute>
+                    },
+                    {
+                        path: "/edit-profile",
+                        element: <PrivetRoute><EditProfile /></PrivetRoute>
+                    },
+                    {
+                        path: "/post/:id",
+                        element: <PrivetRoute><PostDetails /></PrivetRoute>
+                    },
+                ]
             },
             {
-                path:"/notifications",
-                element : <Notifications/>
+                path: '/login',
+                element: <LoginPage />
             },
             {
-                path:"/create-post",
-                element : <CreateEditPost/>
+                path: '/register',
+                element: <RegisterPage />
             },
             {
-                path:"/me",
-                element : <Profile/>
+                path: '/register',
+                element: <RegisterPage />
             },
-            {
-                path:"/edit-profile",
-                element : <EditProfile/>
-            },
-            {
-                path:"/post/:id",
-                element : <PostDetails/>
-            },
-        ]
-    },
-    {
-        path: '/login',
-        element: <LoginPage />
-    },
-    {
-        path: '/register',
-        element: <RegisterPage />
-    },
-    {
-        path: '/register',
-        element: <RegisterPage />
-    },
-       ],
-       errorElement:<ErrorPage/>
+        ],
+        errorElement: <ErrorPage />
     }
 
 ])

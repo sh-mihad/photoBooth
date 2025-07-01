@@ -9,7 +9,7 @@ export default function SidebarMenu({ navData, index }) {
             }>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none"
                 viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d={d} />
                 {index === 3 && <circle cx="12" cy="7" r="4" />}
             </svg>
